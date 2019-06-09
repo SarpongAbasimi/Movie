@@ -10,6 +10,6 @@ exports.movies = (req,res)=> {
     }
     throw new err('Request failed')
   }).then(jsonResponse => {
-    res.send(jsonResponse)
+    res.json(jsonResponse)
   })
 };
