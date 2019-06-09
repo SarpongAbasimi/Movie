@@ -8,9 +8,8 @@ describe('GET /', ()=>{
     .expect('Content-Type', /json/)
     .expect(200)
     .end((err, res)=>{
-      if(err) return(done(err))
       done()
-    });
+    }).catch(done);
   });
 });
 

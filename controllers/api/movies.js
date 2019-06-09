@@ -9,7 +9,6 @@ exports.movies = (req,res)=> {
       return response.json()
     }
     throw new err('Request failed')
-  }).then(jsonResponse => {
-    res.json(jsonResponse)
-  })
+  }, networkError => console.log(networkError.message))
+  .then(jsonResponse => res.json(jsonResponse))
 };

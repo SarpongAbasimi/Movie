@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --timeout 15000 --recursive --exit",
+    "test": "./node_modules/mocha/bin/mocha --recursive --exit",
     "dev": "nodemon app.js",
     "coverage": "nyc npm run test"
   },
