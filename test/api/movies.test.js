@@ -5,7 +5,7 @@ describe('GET /', ()=>{
   it('takes users to the application home page', (done)=>{
     request(app)
     .get('/')
-    .expect(200)
-    .expect(/Hello world/, done)
+    .expect(200, done)
   });
 });
+
