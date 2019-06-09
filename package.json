@@ -6,6 +6,8 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --recursive --exit",
     "dev": "nodemon app.js",
+    "client": "cd client && npm start",
+    "start": "concurrently \"npm run dev\" \"npm run client\"",
     "coverage": "nyc npm run test"
   },
   "keywords": [],
