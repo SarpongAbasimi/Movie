@@ -4,7 +4,7 @@ const app = require('../../app')
 describe('GET /', ()=>{
   it('responds with a json object', (done)=>{
     request(app)
-    .get('/')
+    .get('/api/movies')
     .expect('Content-Type', /json/)
     .expect(200)
     .end((err, res)=>{
