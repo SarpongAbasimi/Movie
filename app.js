@@ -2,7 +2,7 @@ const express = require('express')
 ,app= express();
 
 require('dotenv').config()
-app.use('/', require('./routes/api/movies'))
+app.use('/api/movies', require('./routes/api/movies'))
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, ()=>{
