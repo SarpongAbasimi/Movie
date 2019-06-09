@@ -8,7 +8,6 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('<Nav/>', ()=> {
   it('should render hello on the home page', ()=> {
     const wrapper = shallow(<Nav/>)
-    console.log(wrapper.debug())
     expect(wrapper.find('span').text()).toEqual('hello')
   });
 });
