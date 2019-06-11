@@ -4,5 +4,4 @@ const express = require('express')
 
 router.get('/',movies.movies)
 
-
 module.exports = router

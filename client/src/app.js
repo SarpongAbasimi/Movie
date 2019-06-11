@@ -1,10 +1,18 @@
 import React from 'react';
-import { Nav } from '../src/components/nav'
+import { Nav } from '../src/components/nav';
+import './styles/app.css'
 
 export class App extends React.Component{
   constructor(props){
     super(props)
     this.state = {
+      navLinks :[
+        {id: 1, type: "DISCOVER"},
+        {id: 2, type: "MOVIES"},
+        {id: 3, type: "TV SHOWS"},
+        {id: 4, type: "LOGIN"},
+        {id: 5, type: "SIGN UP"},
+      ],
       list: []
     }
   }
@@ -24,7 +32,7 @@ export class App extends React.Component{
   render(){
     return(
     <div>
-      <Nav/>
+      <Nav link={this.state.navLinks}/>
     </div>
     )
   }
