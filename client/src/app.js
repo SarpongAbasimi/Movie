@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav } from '../src/components/nav';
+import { MovieList } from '../src/components/movieList';
 import './styles/app.css'
 
 export class App extends React.Component{
@@ -33,6 +34,7 @@ export class App extends React.Component{
     return(
     <div>
       <Nav link={this.state.navLinks}/>
+      <MovieList movies={this.state.list}/>
     </div>
     )
   }
