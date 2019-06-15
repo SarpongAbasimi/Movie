@@ -1,0 +1,35 @@
+.popularMoviesListContainer{
+  background-color: #063B33;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+}
+
+.popularMoviesListContainer #eachMovie{
+  width: 150px;
+  padding: 5px;
+  position: relative;
+}
+
+.popularMoviesListContainer #eachMovie img{
+  width:100%;
+  transition: width 500ms ease-in-out 10ms;
+  border-radius: 5px;
+}
+
+.popularMoviesListContainer #eachMovie:hover img{
+  width: 95%;
+  pointer-events: none;
+}
+
+#vote-average{
+  background-color: #FEC900;
+  position: absolute;
+  padding: 4px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
