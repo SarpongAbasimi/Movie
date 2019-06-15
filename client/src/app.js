@@ -1,6 +1,7 @@
 import React from 'react';
 import { Nav } from '../src/components/nav';
 import { MovieList } from '../src/components/movieList';
+import { popularMoviesData } from '../src/components/apiCalls'
 import './styles/app.css'
 
 export class App extends React.Component{
@@ -18,19 +19,8 @@ export class App extends React.Component{
     }
   }
 
-  fetchMovieData(){
-    fetch('/api/movies')
-    .then(response => {
-      if(response.ok){
-        return response.json()
-      }
-      throw new Error('Request Failes');
-    }, networkError => console.log(networkError.message))
-    .then(jsonResponse => this.setState({list:jsonResponse}))
-    .catch(rejection => console.log(`There was a rejection ${rejection}`));
-  }
   componentDidMount(){
-    return this.fetchMovieData()
+    return popularMoviesData(this)
    }
 
   render(){
