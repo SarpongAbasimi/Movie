@@ -52,3 +52,47 @@ Technologies Used So Far.
 - ``Fork`` and ``clone`` this repo.
 - open ``terminal`` and cd into ``movies``.
 - ``run bundle install``
+
+
+
+<h4 align='center'>
+Updates.
+</h4>
+
+ ``15th June ``
+> I finally got time today to work on the  movie app and I must say that I have learnt a lot. This is how the app currently looks now. I still have a long way to go to I am happy with the prgress.
+
+<img width="1278" alt="Screen Shot 2019-06-15 at 21 08 52" src="https://user-images.githubusercontent.com/37377831/59555923-7b792b80-8fb2-11e9-9330-d0d9ea3a96ed.png">
+
+> The next step is to add a show page. This page will ``render`` each individual ``movie`` and give more information about it.
+
+- Today, I also learnt about how to ``mock`` api calls when ``testing`` using ``jest spyOn``. This allowed me to test the ``App`` component without making an actual ``api`` call.
+
+
+```javascript
+
+  it('fetches data from the server when component mounts', (done)=>{
+    const mockedResponse = {"page": 1, "total_results": 19840,};
+
+    const mockJsonPromise = Promise.resolve(mockedResponse),
+          mockFetchPromise = Promise.resolve({
+            json: ()=> mockJsonPromise
+          });
+
+    jest.spyOn(global, 'fetch').mockImplementation(()=> mockFetchPromise);
+
+    const wrapper = shallow(< App/>);
+
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+    expect(global.fetch).toHaveBeenCalledWith('/api/movies/popular/movies');
+
+    process.nextTick(() => {
+      expect(wrapper.find('Nav')).toBeTruthy();
+      global.fetch.mockClear()
+      done();
+    });
+    done();
+  });
+
+```
+> The done() method is passed to the ``it`` block to tell jest to wait until the async funtion, ``fetch``,is completed before the test ends.
