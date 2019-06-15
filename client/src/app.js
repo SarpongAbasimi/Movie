@@ -18,7 +18,7 @@ export class App extends React.Component{
     }
   }
 
-  componentDidMount(){
+  fetchMovieData(){
     fetch('/api/movies')
     .then(response => {
       if(response.ok){
@@ -28,6 +28,9 @@ export class App extends React.Component{
     }, networkError => console.log(networkError.message))
     .then(jsonResponse => this.setState({list:jsonResponse}))
     .catch(rejection => console.log(`There was a rejection ${rejection}`));
+  }
+  componentDidMount(){
+    return this.fetchMovieData()
    }
 
   render(){
