@@ -59,7 +59,7 @@ Technologies Used So Far.
 Updates.
 </h4>
 
- ``15th June ``
+ ``15th June ``.
 > I finally got time today to work on the  movie app and I must say that I have learnt a lot. This is how the app currently looks now. I still have a long way to go to I am happy with the prgress.
 
 <img width="1278" alt="Screen Shot 2019-06-15 at 21 08 52" src="https://user-images.githubusercontent.com/37377831/59555923-7b792b80-8fb2-11e9-9330-d0d9ea3a96ed.png">
@@ -96,3 +96,17 @@ Updates.
 
 ```
 > The done() method is passed to the ``it`` block to tell jest to wait until the async funtion, ``fetch``,is completed before the test ends.
+
+``16th june 2019``.
+
+- I wrote a ``test`` for my custom ``404 page``.
+- Implemented a custom 404 page to the application.
+>  I did this even though, I said i wanted to add a show page.``😝``.
+- This is the custom page curretly looks.
+
+<img width="1280" alt="Screen Shot 2019-06-16 at 14 03 45" src="https://user-images.githubusercontent.com/37377831/59564562-2683f680-9040-11e9-9f73-7b31cfd81334.png">
+
+> Now unto what, I said I was gonna do for today, add a show page.
+
+
+
