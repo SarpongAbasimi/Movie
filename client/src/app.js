@@ -11,16 +11,19 @@ export class App extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      list: []
+      list: [],
+      detailData: []
     }
+    this.fetchMovieDetail = this.fetchMovieDetail.bind(this);
   }
 
   componentDidMount(){
-    return popularMoviesData(this)
+    return popularMoviesData(this);
    }
 
-  fetchMovieDetail(){
-    console.log('Hello world')
+  fetchMovieDetail(movieId){
+    const { list } = this.state;
+      return list.results.filter( movie =>  movie.id === movieId ? this.setState({ detailData: [ movie ] }) : "Sorry")
   }
 
   render(){
@@ -30,7 +33,7 @@ export class App extends React.Component{
         <Nav link={this.state.navLinks}/>
       </div>
       <Route exact path='/' render={()=> <Home movieListData={this.state.list} getDetail={this.fetchMovieDetail} /> }/>
-      <Route exact path='/movie/:id' component={Movie} />
+      <Route exact path='/movie/:id' render={ ()=> <Movie selectedMovieDetail={this.state.detailData} />} />
     </Router>
     )
   }

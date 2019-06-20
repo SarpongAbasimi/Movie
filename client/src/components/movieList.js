@@ -11,7 +11,7 @@ export const MovieList = (props) => {
           <div key={eachMovie.id} id="eachMovie">
            <span id="vote-average">{eachMovie.vote_average}</span>
              <Link to={`/movie/${eachMovie.id}`}>
-               <img  onClick={()=> movieDetail} src={`https://image.tmdb.org/t/p/w500/${eachMovie.poster_path}`} alt={eachMovie.title}/>
+               <img  onClick={()=> movieDetail(eachMovie.id)} src={`https://image.tmdb.org/t/p/w500/${eachMovie.poster_path}`} alt={eachMovie.title}/>
              </Link>
           </div>
         );
