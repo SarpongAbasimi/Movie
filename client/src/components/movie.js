@@ -10,9 +10,14 @@ export const Movie = (props) => {
     <div>
       {selectedMovieDetail.map(eachInfo => {
         return(
-          <div key={eachInfo.id}>
+          <div key={eachInfo.id} className='grid'>
            <div className='imageContainer'>
-            {eachInfo.poster_path && <img src={`https://image.tmdb.org/t/p/w500/${eachInfo.poster_path}`} alt="MovieImage"/>}
+            {eachInfo.poster_path && <img id='detailImage' src={`https://image.tmdb.org/t/p/w500/${eachInfo.poster_path}`} alt="MovieImage"/>}
+           </div>
+           <div className='movieDetailContainer'>
+             <div>
+               <h1>{eachInfo.title}</h1>
+             </div>
            </div>
          </div>
         );

@@ -1,0 +1,13 @@
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.grid .imageContainer{
+  background-color: #1E1F73;
+  padding: 10px;
+  height: 100vh;
+}
+
+.imageContainer #detailImage{
+  width: 90%;
+}
