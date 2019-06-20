@@ -14,14 +14,14 @@
 
 .popularMoviesListContainer #eachMovie img{
   width:100%;
-  transition: width 500ms ease-in-out 10ms;
+  /* transition: width 1ms ease-in-out 10ms; */
   border-radius: 5px;
 }
 
-.popularMoviesListContainer #eachMovie:hover img{
+/* .popularMoviesListContainer #eachMovie:hover img{
   width: 95%;
   pointer-events: none;
-}
+} */
 
 #vote-average{
   background-color: #FEC900;

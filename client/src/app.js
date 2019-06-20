@@ -1,20 +1,16 @@
 import React from 'react';
 import { Nav } from '../src/components/nav';
-import { MovieList } from '../src/components/movieList';
-import { popularMoviesData } from '../src/components/apiCalls'
-import './styles/app.css'
+import { Home } from './components/Home';
+import { popularMoviesData } from '../src/components/apiCalls';
+import {  Movie } from '../src/components/movie';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import './styles/app.css';
 
 export class App extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      navLinks :[
-        {id: 1, type: "DISCOVER"},
-        {id: 2, type: "MOVIES"},
-        {id: 3, type: "TV SHOWS"},
-        {id: 4, type: "LOGIN"},
-        {id: 5, type: "SIGN UP"},
-      ],
       list: []
     }
   }
@@ -23,12 +19,19 @@ export class App extends React.Component{
     return popularMoviesData(this)
    }
 
+  fetchMovieDetail(){
+    console.log('Hello world')
+  }
+
   render(){
     return(
-    <div>
-      <Nav link={this.state.navLinks}/>
-      <MovieList movies={this.state.list}/>
-    </div>
+    <Router>
+      <div>
+        <Nav link={this.state.navLinks}/>
+      </div>
+      <Route exact path='/' render={()=> <Home movieListData={this.state.list} getDetail={this.fetchMovieDetail} /> }/>
+      <Route exact path='/movie/:id' component={Movie} />
+    </Router>
     )
   }
 };

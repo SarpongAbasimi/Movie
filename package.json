@@ -20,7 +20,8 @@
     "ejs": "^2.6.2",
     "express": "^4.17.1",
     "mocha": "^6.1.4",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "react-router-dom": "^5.0.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
