@@ -18,8 +18,12 @@ export const Movie = (props) => {
             {eachInfo.poster_path && <img id='detailImage' src={`https://image.tmdb.org/t/p/w500/${eachInfo.poster_path}`} alt="MovieImage"/>}
            </div>
            <div className='movieDetailContainer'>
-             <div>
+             <div id='info'>
                <h1>{eachInfo.title}</h1>
+             </div>
+             <div id='overView'> 
+               <h1>Overview</h1>
+               <p>{eachInfo.overview}</p>
              </div>
            </div>
          </div>

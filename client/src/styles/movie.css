@@ -1,21 +1,59 @@
+:root{
+  --Mons: Montserrat;
+}
+
 .grid{
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 3fr;
 }
 
 .grid .imageContainer{
   background-color: #1E1F73;
   padding: 10px;
-  height: 100vh;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .imageContainer #detailImage{
-  width: 90%;
+  width: 80%;
+  border-radius: 4px;
+  align-self: center;
 }
 
 .Back{
   padding: 4px;
+  width: 30%;
+  text-align: center;
+
 }
 .Back #backtitle{
   color: #ffff;
+  font-family: var(--Mons);
+}
+
+.grid .movieDetailContainer #info{
+  background-color: red;
+  padding: 30px;
+}
+
+.grid .movieDetailContainer #info h1{
+  font-family: var(--Mons);
+  color: #ffff;
+  font-size: 24px;
+}
+
+.grid .movieDetailContainer #overView{
+  padding: 20px;
+}
+
+.grid .movieDetailContainer #overView h1{
+  font-family: var(--Mons);
+  font-weight: bold;
+  padding: 5px 0p;
+}
+
+.grid .movieDetailContainer #overView p {
+  font-size: 14px;
+  padding-top: 15px;
 }
