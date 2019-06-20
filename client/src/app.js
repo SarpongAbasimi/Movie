@@ -33,7 +33,7 @@ export class App extends React.Component{
         <Nav link={this.state.navLinks}/>
       </div>
       <Route exact path='/' render={()=> <Home movieListData={this.state.list} getDetail={this.fetchMovieDetail} /> }/>
-      <Route exact path='/movie/:id' render={ ()=> <Movie selectedMovieDetail={this.state.detailData} />} />
+      <Route exact path='/movie' render={ ()=> <Movie selectedMovieDetail={this.state.detailData} />} />
     </Router>
     )
   }
