@@ -7,10 +7,9 @@
   grid-template-columns: 2fr 3fr;
 }
 
-.grid .imageContainer{
-  background-color: #1E1F73;
+.grid .imageContainer{ 
   padding: 10px;
-  height: 90vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
 }
@@ -23,17 +22,20 @@
 
 .Back{
   padding: 4px;
-  width: 30%;
+  width: 25%;
   text-align: center;
 
 }
 .Back #backtitle{
-  color: #ffff;
+  color: #313131;
   font-family: var(--Mons);
 }
 
-.grid .movieDetailContainer #info{
+.grid .movieDetailContainer{
   background-color: red;
+}
+
+.grid .movieDetailContainer #info{
   padding: 30px;
 }
 
@@ -44,6 +46,7 @@
 }
 
 .grid .movieDetailContainer #overView{
+  color: #ffff;
   padding: 20px;
 }
 
@@ -56,4 +59,9 @@
 .grid .movieDetailContainer #overView p {
   font-size: 14px;
   padding-top: 15px;
+}
+
+.grid .movieDetailContainer #release-date {
+  padding: 20px;
+  color: #ffff;
 }

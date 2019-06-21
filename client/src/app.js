@@ -12,19 +12,13 @@ export class App extends React.Component{
     super(props)
     this.state = {
       list: [],
-      detailData: []
+      detailData: undefined
     }
-    this.fetchMovieDetail = this.fetchMovieDetail.bind(this);
   }
 
   componentDidMount(){
     return popularMoviesData(this);
    }
-
-  fetchMovieDetail(movieId){
-    const { list } = this.state;
-      return list.results.filter( movie =>  movie.id === movieId ? this.setState({ detailData: [ movie ] }) : "Sorry")
-  }
 
   render(){
     return(
@@ -32,8 +26,8 @@ export class App extends React.Component{
       <div>
         <Nav link={this.state.navLinks}/>
       </div>
-      <Route exact path='/' render={()=> <Home movieListData={this.state.list} getDetail={this.fetchMovieDetail} /> }/>
-      <Route exact path='/movie' render={ ()=> <Movie selectedMovieDetail={this.state.detailData} />} />
+      <Route exact path='/' render={()=> <Home movieListData={this.state.list} /> }/>
+      <Route exact path='/movie/:id' component = { Movie }/>
     </Router>
     )
   }
