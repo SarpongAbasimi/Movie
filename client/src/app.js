@@ -12,7 +12,6 @@ export class App extends React.Component{
     super(props)
     this.state = {
       list: [],
-      detailData: undefined
     }
   }
 
