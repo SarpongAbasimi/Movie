@@ -1,19 +1,19 @@
 const fetch = require('node-fetch');
 
 exports.movies = (req,res)=> {
-  console.log(req.params)
-  const baseurl= process.env.BASEURL,
-  movieID = process.env.SEARCHMOVIEID,
-  apikey = process.env.MOVIEDB_API_KEY,
-  userParams = parseInt(req.params.id)
-  fetch(`${baseurl}${userParams}${movieID}${apikey}`)
-  .then(response =>{
-    if(response.ok){
-      return response.json()
-    }
-    throw new err('Request failed')
-  }, networkError => console.log(networkError.message))
-  .then(jsonResponse => res.json(jsonResponse))
+    res.json({"adult":false,"backdrop_path":"/phxiKFDvPeQj4AbkvJLmuZEieDU.jpg","belongs_to_collection":null,"budget":200000000,"genres":[{"id":878,"name":"Science Fiction"},{"id":28,"name":"Action"}],"homepage":"http://darkphoenix.com","id":320288,"imdb_id":"tt6565702","original_language":"en","original_title":"Dark Phoenix","overview":"The X-Men face their most formidable and powerful foe when one of their own, Jean Grey, starts to spiral out of control. During a rescue mission in outer space, Jean is nearly killed when she's hit by a mysterious cosmic force. Once she returns home, this force not only makes her infinitely more powerful, but far more unstable. The X-Men must now band together to save her soul and battle aliens that want to use Grey's new abilities to rule the galaxy.","popularity":257.366,"poster_path":"/kZv92eTc0Gg3mKxqjjDAM73z9cy.jpg","production_companies":[{"id":431,"logo_path":null,"name":"The Donners' Company","origin_country":"US"},{"id":25,"logo_path":"/qZCc1lty5FzX30aOCVRBLzaVmcp.png","name":"20th Century Fox","origin_country":"US"},{"id":28788,"logo_path":null,"name":"Genre Films","origin_country":"US"},{"id":9168,"logo_path":"/hQNXrYIuyLRxMSBuGHk0GX7CCBS.png","name":"Bad Hat Harry Productions","origin_country":"US"},{"id":7505,"logo_path":"/837VMM4wOkODc1idNxGT0KQJlej.png","name":"Marvel Entertainment","origin_country":"US"},{"id":112049,"logo_path":null,"name":"Kinberg Genre","origin_country":""}],"production_countries":[{"iso_3166_1":"US","name":"United States of America"}],"release_date":"2019-06-05","revenue":0,"runtime":114,"spoken_languages":[{"iso_639_1":"en","name":"English"},{"iso_639_1":"tr","name":"Türkçe"}],"status":"Released","tagline":"The phoenix will rise","title":"Dark Phoenix","video":false,"vote_average":6.3,"vote_count":825})
+//   const baseurl= process.env.BASEURL,
+//   movieID = process.env.SEARCHMOVIEID,
+//   apikey = process.env.MOVIEDB_API_KEY,
+//   userParams = parseInt(req.params.id)
+//   fetch(`${baseurl}${userParams}${movieID}${apikey}`)
+//   .then(response =>{
+//     if(response.ok){
+//       return response.json()
+//     }
+//     throw new err('Request failed')
+//   }, networkError => console.log(networkError.message))
+//   .then(jsonResponse => res.json(jsonResponse))
 };
 
 

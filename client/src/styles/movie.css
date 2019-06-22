@@ -1,5 +1,6 @@
 :root{
   --Mons: Montserrat;
+  --open: 'Open Sans', sans-serif;
 }
 
 .grid{
@@ -9,59 +10,57 @@
 
 .grid .imageContainer{ 
   padding: 10px;
-  height: 95vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #FD1014;
 }
 
-.imageContainer #detailImage{
+.grid #poster{
   width: 80%;
   border-radius: 4px;
-  align-self: center;
 }
 
-.Back{
-  padding: 4px;
-  width: 25%;
-  text-align: center;
-
-}
-.Back #backtitle{
-  color: #313131;
-  font-family: var(--Mons);
+.grid .infomation-container{
+  background-color: #FD1014;
+  padding: 10px;
 }
 
-.grid .movieDetailContainer{
-  background-color: red;
-}
-
-.grid .movieDetailContainer #info{
-  padding: 30px;
-}
-
-.grid .movieDetailContainer #info h1{
-  font-family: var(--Mons);
+.grid .infomation-container #title{
   color: #ffff;
-  font-size: 24px;
+  padding: 5px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.grid .movieDetailContainer #overView{
+.grid .infomation-container .over-view{
+  font-family: var(--open);
+  font-weight: 300;
   color: #ffff;
-  padding: 20px;
+  padding: 10px;
+}
+.grid .infomation-container .over-view #overview-title{
+  padding-bottom: 10px;
+  font-size: 20px;
 }
 
-.grid .movieDetailContainer #overView h1{
+.grid .infomation-container #facts #factTitle{
   font-family: var(--Mons);
-  font-weight: bold;
-  padding: 5px 0p;
-}
-
-.grid .movieDetailContainer #overView p {
-  font-size: 14px;
-  padding-top: 15px;
-}
-
-.grid .movieDetailContainer #release-date {
-  padding: 20px;
+  font-weight: 500;
   color: #ffff;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.grid .infomation-container #facts #production-companies{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid .infomation-container #facts #production-companies .company{
+  background-color: aliceblue;
+  border-radius: 2px;
+}
+.grid .infomation-container #facts #production-companies .company .imgDiv #com-img{
+  width: 100px;
+  padding: 10px;
 }
