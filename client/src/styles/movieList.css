@@ -1,5 +1,5 @@
 .popularMoviesListContainer{
-  background-color: #063B33;
+  background-color: #1D2227;
   display: flex;
   flex-wrap: wrap;
   height: auto;
@@ -14,14 +14,13 @@
 
 .popularMoviesListContainer #eachMovie img{
   width:100%;
-  /* transition: width 1ms ease-in-out 10ms; */
+  transition: width 100ms ease-in-out 50ms;
   border-radius: 5px;
 }
 
-/* .popularMoviesListContainer #eachMovie:hover img{
+.popularMoviesListContainer #eachMovie:hover img{
   width: 95%;
-  pointer-events: none;
-} */
+}
 
 #vote-average{
   background-color: #FEC900;
