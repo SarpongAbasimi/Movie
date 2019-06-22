@@ -62,7 +62,7 @@ export class Movie extends React.Component{
                    <p id='genere'>Genere</p>
                    { data.genres && data.genres.map(each_genere => {
                      return(
-                       <span key={each_genere.id} className='generes-name'>{each_genere.name}</span>
+                       <span key={each_genere.id} className='generes-name'>{`#${each_genere.name}`}</span>
                      );
                    })}
                  </div>
