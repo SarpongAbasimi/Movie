@@ -109,4 +109,30 @@ Updates.
 > Now unto what, I said I was gonna do for today, add a show page.
 
 
+``22th june 2019``.
 
+- A lot has changed since the last time I worked on the application.
+- I have added routes to the app using ``react-routers``.
+- This is how the app currently looks.
+
+<img width="1280" alt="Screen Shot 2019-06-22 at 21 52 28" src="https://user-images.githubusercontent.com/37377831/59969122-6f571600-953e-11e9-9266-aecfb9da1683.png">
+
+- when a user cliks on an movie, the user is taken to a show page.
+
+<img width="1280" alt="Screen Shot 2019-06-22 at 21 46 29" src="https://user-images.githubusercontent.com/37377831/59969132-cbba3580-953e-11e9-87e8-02e0a095a2a3.png">
+
+> The idea behind the show page is to give users information on a selected movie.
+
+<h4 align='center'>
+Learning.
+</h4>
+
+- I learnt how to pass props to react routers using ``render`` instead of ``component``. **[More Info Here](https://blog.bitsrc.io/must-know-concepts-of-react-router-fb9c8cc3c12)**.
+
+<h4 align='center'>
+To Dos.
+</h4>
+
+- The next step is to add a 404 page to the client side.
+- Then add the ability for a user to sign up and log in.
+- Implement pagination.
