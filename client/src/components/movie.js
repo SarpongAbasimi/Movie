@@ -51,6 +51,23 @@ export class Movie extends React.Component{
                   );
                 })}
               </div>
+              <div className='facts-container'>
+                <h1>Facts</h1>
+                 { data.budget && 
+                 <div>
+                   <p className='budget-word'>Budget</p>
+                   <span id='budget'>{`$ ${data.budget}`}</span>
+                   <p id='status'>Status</p>
+                   <span id='status-data'>{data.status}</span>
+                   <p id='genere'>Genere</p>
+                   { data.genres && data.genres.map(each_genere => {
+                     return(
+                       <span key={each_genere.id} className='generes-name'>{each_genere.name}</span>
+                     );
+                   })}
+                 </div>
+                 }
+              </div>
             </div>
           </div>
         </div>}

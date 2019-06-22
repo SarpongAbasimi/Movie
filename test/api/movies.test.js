@@ -5,7 +5,7 @@ describe('GET /', ()=>{
   it('responds with a json object', (done)=>{
     request(app)
     .get('/api/movies')
-    .expect('Content-Type', /json/)
+    .expect('Content-Type', /html/)
     .expect(200)
     .end((err, res)=>{
       if(err){

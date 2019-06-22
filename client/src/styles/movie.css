@@ -6,6 +6,7 @@
 .grid{
   display: grid;
   grid-template-columns: 2fr 3fr;
+  background-color: #FD1014;
 }
 
 .grid .imageContainer{ 
@@ -59,8 +60,57 @@
 .grid .infomation-container #facts #production-companies .company{
   background-color: aliceblue;
   border-radius: 2px;
+  padding-bottom: 5px;
 }
 .grid .infomation-container #facts #production-companies .company .imgDiv #com-img{
   width: 100px;
   padding: 10px;
+}
+
+.grid .infomation-container #facts .facts-container{
+  padding: 5px;
+}
+
+.grid .infomation-container #facts .facts-container h1 {
+  font-family: var(--Mons);
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffff;
+}
+.grid .infomation-container #facts .facts-container div{
+  padding: 10px 0;
+}
+
+.grid .infomation-container #facts .facts-container div #budget{
+  color: #ffff;
+  font-size: 12px;
+  font-family: var(--open);
+}
+
+.grid .infomation-container #facts .facts-container div .budget-word{
+  color: #ffff;
+}
+
+.grid .infomation-container #facts .facts-container div #status{
+  padding-top: 5px;
+  color: #ffff;
+}
+.grid .infomation-container #facts .facts-container div #status-data{
+  font-size: 12px;
+  color: #ffff;
+}
+
+.grid .infomation-container #facts .facts-container div #genere{
+  padding-top: 5px;
+  color: #ffff;
+}
+
+.grid .infomation-container #facts .facts-container div #genere{
+  padding-top: 5px;
+  color: #ffff;
+}
+
+.grid .infomation-container #facts .facts-container div .generes-name{
+  color: #ffff;
+  font-size: 12px;
 }
