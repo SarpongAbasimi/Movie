@@ -1,35 +1,24 @@
-// import React from 'react';
-// import Enzyme from 'enzyme';
-// import Adapter from 'enzyme-adapter-react-16';
-// import { shallow } from 'enzyme';
-// import { Nav } from '../components/nav';
-// Enzyme.configure({ adapter: new Adapter() });
+import React from 'react';
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import { shallow } from 'enzyme';
+import { Nav } from '../components/nav';
+Enzyme.configure({ adapter: new Adapter() });
 
-// describe('<Nav/>', ()=> {
-//   it('It Has a length of one', ()=> {
-//     const navLinks = [
-//         {id: 1, type: "DISCOVER"},
-//         {id: 2, type: "MOVIES"},
-//         {id: 3, type: "TV SHOWS"},
-//         {id: 4, type: "LOGIN"},
-//         {id: 5, type: "SIGN UP"},
-//       ],
-//      wrapper = shallow(<Nav link={ navLinks }/>)
-//      expect(wrapper.find('.navbar')).toHaveLength(1)
-//   });
+describe('<Nav/>', ()=> {
+  it('It Has a length of one', ()=> {
+     const wrapper = shallow(<Nav/>)
+     expect(wrapper.find('.navbar')).toHaveLength(1)
+  });
 
-//   it('contains name to link inside of it', ()=>{
-//     const navLinks = [
-//         {id: 1, type: "DISCOVER"},
-//         {id: 2, type: "MOVIES"},
-//         {id: 3, type: "TV SHOWS"},
-//         {id: 4, type: "LOGIN"},
-//         {id: 5, type: "SIGN UP"},
-//       ],
-//      wrapper = shallow(<Nav link={ navLinks }/>)
+  it('contains 3 movie links inside of it', ()=>{
+     const wrapper = shallow(<Nav/>)
+     expect(wrapper.find('.movies').children()).toHaveLength(3)
+  })
 
-//      const links = wrapper.find('.navBarLink').map(node => node.text());
-//      expect(links).toEqual(['DISCOVER', 'MOVIES', 'TV SHOWS', 'LOGIN', 'SIGN UP']);
-//   })
-// });
+  it(' contains links to login and signup page', ()=>{
+    const wrapper = shallow(<Nav/>)
+    expect(wrapper.find('.register').children()).toHaveLength(2)
+  });
+});
 
