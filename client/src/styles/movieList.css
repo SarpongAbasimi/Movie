@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   height: auto;
   justify-content: center;
+  height: 95vh;
 }
 
 .popularMoviesListContainer #eachMovie{
