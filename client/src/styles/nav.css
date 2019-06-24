@@ -1,17 +1,73 @@
+
+:root{
+  --lheight: 50px;
+  --fmaily: 'Montserrat', sans-serif;
+  --fweight: 700;
+  --bradius: 5px;
+}
+
 .navbar{
  background-color:#1D2227;
- display: flex;
  height:50px;
+ padding: 10px;
 }
 
-.navbar ul{
-  width: 100%;
+.navElementsContainer{
+  height: 50px;
+  display: flex;
 }
 
-.navbar ul li {
- list-style-type: none;
- padding: 15px;
- color: #FFFFFF;
- font-size: 10px;
- font-family: 'Montserrat', sans-serif;
+.navElementsContainer .movies{
+  width: 50%;
+  text-align: center;
+}
+
+.navElementsContainer .movies .links{
+  text-decoration: none;
+}
+
+.navElementsContainer .movies li {
+  line-height: var(--lheight);
+  display: inline;
+  list-style-type: none;
+  padding: 20px;
+  font-family: var(--fmaily);
+  font-weight: var(--fweight);
+  color: #ffff;
+  transition: color 500ms cubic-bezier(0.075, 0.82, 0.165, 1), opacity 100ms ease-in-out 100ms;
+}
+
+.navElementsContainer .movies li:hover{
+  color: red;
+  opacity: 0.8;;
+}
+.navElementsContainer .register {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5px;
+}
+
+.navElementsContainer .register li {
+  display: inline-block;
+  list-style-type: none;
+  line-height: var(--lheight);
+  font-family: var(--fmaily);
+  font-weight: var(--fweight);
+  font-size: 14px;
+  border-radius: var(--bradius);
+}
+
+.navElementsContainer .register #login{
+  padding: 0px 20px;
+  background-color: #5B5EA6;
+  margin-right: 5px;
+  border-radius: var(--bradius);
+  color: #fff;
+}
+
+.navElementsContainer .register #sign-up{
+  padding: 0px 20px;
+  background-color: #CE3175;
+  color: #ffff;
 }
