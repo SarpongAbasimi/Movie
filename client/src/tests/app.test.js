@@ -32,7 +32,7 @@ describe('<App/>', ()=> {
 
     jest.spyOn(global, 'fetch').mockImplementation(()=> mockFetchPromise);
 
-    const wrapper = shallow(< App/>);
+    const wrapper = shallow(<App/>);
 
     expect(global.fetch).toHaveBeenCalledTimes(1);
     expect(global.fetch).toHaveBeenCalledWith('/api/movies/popular/movies');
@@ -43,5 +43,9 @@ describe('<App/>', ()=> {
       done();
     });
     done();
+  });
+
+  xit('allows a user to access more information about a movie', ()=>{
+
   });
 });

@@ -142,7 +142,7 @@ To Dos.
 <img width="960" alt="Screen Shot 2019-06-24 at 18 26 53" src="https://user-images.githubusercontent.com/37377831/60039194-0f7f7d00-96ae-11e9-87ae-6860981f0859.png">
 
 
-- I added navigation links , login and signup button to the app.
+- I added navigation links, login and signup button to the app.
   - The next step is to add a 404 page to the client side.
   - Then add the ability for a user to sign up and log in.
   - Implement pagination.
