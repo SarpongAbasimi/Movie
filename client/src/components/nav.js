@@ -7,6 +7,7 @@ export const Nav = (props)=>{
    <div className="navbar">
      <div className='navElementsContainer'>
        <ul className='movies'>
+         <Link to='/' className='links'><li id='home'>Home</li> </Link>
          <Link to='/discover' className='links'><li id='discover'>Discover</li> </Link>
          <Link to='/movies' className='links'><li id='movies'>Movies</li></Link>
          <Link to='/tvshows' className='links'><li id='tv-shows'>TV SHOWS</li></Link>
