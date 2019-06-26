@@ -119,7 +119,7 @@ Updates.
 
 - when a user cliks on an movie, the user is taken to a show page.
 
-<img width="1280" alt="Screen Shot 2019-06-22 at 21 46 29" src="https://user-images.githubusercontent.com/37377831/59969132-cbba3580-953e-11e9-87e8-02e0a095a2a3.png">
+<img width="1280" alt="Screen Shot 2019-06-22 at 21 46 29" src="https://user-images.githubusercontent.com/37377831/60201401-1c33da80-9840-11e9-90a4-762f5c9be911.png">
 
 > The idea behind the show page is to give users information on a selected movie.
 
