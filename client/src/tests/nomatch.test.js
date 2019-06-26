@@ -13,11 +13,11 @@ describe('< NoMatch/>', ()=>{
 
   it('contains an error message', ()=>{
     const wrapper = shallow(<NoMatch/>);
-    console.log(wrapper.debug())
-    expect(wrapper.contains(
-      <div className='container-wrapper'>
-        <h1>Sorry, we can't find the page you're looking for </h1>
-      </div>
+    expect(wrapper.containsAllMatchingElements(
+    [
+      <h1>Sorry, we can't find the page you're looking for</h1>,
+      <span id='errorPageBackHome'>Back to Home</span>
+    ]
     )).toEqual(true)
   });
 });

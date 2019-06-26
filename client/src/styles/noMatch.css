@@ -1,0 +1,35 @@
+:root{
+    --lheight: 50px;
+    --fmaily: 'Montserrat', sans-serif;
+    --fweight: 700;
+    --oSans: 'Open Sans', sans-serif;
+  }
+ 
+.container-wrapper{
+  background-color: #282C35;
+  height: 95vh;
+  text-align: center;
+}
+
+.container-wrapper h1{
+    /* background-color: goldenrod;  */
+  padding: 80px;
+  color: #ffff;
+  font-family: var(--fmaily);
+  font-weight:  var(--fweight);
+}
+
+.container-wrapper .link{
+  text-decoration: none;
+}
+
+.container-wrapper #errorPageBackHome {
+  background-color: #C7A14D;
+  color: #ffff;
+  padding: 10px;
+  font-family: var(--oSans);
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+

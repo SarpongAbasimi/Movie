@@ -13,7 +13,7 @@ describe('<Nav/>', ()=> {
 
   it('contains 3 movie links inside of it', ()=>{
      const wrapper = shallow(<Nav/>)
-     expect(wrapper.find('.movies').children()).toHaveLength(3)
+     expect(wrapper.find('.movies').children()).toHaveLength(4)
   })
 
   it(' contains links to login and signup page', ()=>{
