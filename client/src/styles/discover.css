@@ -1,15 +1,30 @@
 .container{
-  background-color: red;
+  background-color:#1D2227;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 .main-container{
-  background-color: gold;
-  width: 200px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 250px;
   margin: 5px;
+  background-color:#282C35;
+  text-align: center;
 }
 
 .main-container img{
   width: 100%;
+  border-radius: 5px;
 }
+
+.main-container #title-holder{
+  font-weight: 700;
+  background-color: #CE3174;
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 14px;
+  margin-top: 1px;
+  color: #ffff;
+}
+
