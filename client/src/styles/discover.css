@@ -1,0 +1,15 @@
+.container{
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main-container{
+  background-color: gold;
+  width: 200px;
+  margin: 5px;
+}
+
+.main-container img{
+  width: 100%;
+}
