@@ -21,11 +21,13 @@ export class Discover extends React.Component{
 
   render(){
     const { discovermovie } = this.state
+    console.log(discovermovie)
     return(<div className='container'>
       {discovermovie.map(movies => {
         return(
           <div key={movies.id} className='main-container'>
             { movies.poster_path && <img src={`https://image.tmdb.org/t/p/w500${movies.poster_path}`} alt=''/> }
+            <div id='title-holder'>{movies.title}</div>
           </div>
         );
       })}
