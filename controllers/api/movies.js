@@ -11,7 +11,7 @@ exports.movies = (req,res)=> {
 //     if(response.ok){
 //       return response.json()
 //     }
-//     throw new err('Request failed')
+//     throw new Error('Request failed')
 //   }, networkError => console.log(networkError.message))
 //   .then(jsonResponse => res.json(jsonResponse))
 };
@@ -437,7 +437,7 @@ res.json({
 //     if(response.ok){
 //       return response.json()
 //     }
-//     throw new err('Request failed')
+//     throw new Error('Request failed')
 //   }, networkError => console.log(networkError.message))
 //   .then(jsonResponse => res.json(jsonResponse))
 }
@@ -794,11 +794,445 @@ exports.discover = (req, res) =>{
 //   query = process.env.DISCOVERQUERY
 //   key = process.env.MOVIEDB_API_KEY
 //   fetch(`${discover}${key}${query}`)
-//   .then(response =>{
+//   .then(response => {
 //     if(response.ok){
 //       return response.json()
 //     }
-//     throw new err('Request failed')
+//     throw new Error('Request failed')
 //   }, networkError => console.log(networkError.message))
 //   .then(jsonResponse => res.json(jsonResponse))
+}
+
+exports.tvshows = (req, res) => {
+  res.json({
+    "page": 1,
+    "total_results": 19998,
+    "total_pages": 1000,
+    "results": [
+        {
+            "original_name": "See No Evil: The Moors Murders",
+            "genre_ids": [
+                18
+            ],
+            "name": "See No Evil: The Moors Murders",
+            "popularity": 800.581,
+            "origin_country": [
+                "GB"
+            ],
+            "vote_count": 12,
+            "first_air_date": "2006-05-14",
+            "backdrop_path": "/7AKhSfJHnVi0zXQS4eJirHDs22p.jpg",
+            "original_language": "en",
+            "id": 11634,
+            "vote_average": 4.8,
+            "overview": "The dramatisation of one of the most notorious killing sprees in British history.",
+            "poster_path": "/b71BaRjp9TwxUZodLGgSRIlkfL8.jpg"
+        },
+        {
+            "original_name": "La casa de papel",
+            "genre_ids": [
+                80,
+                18
+            ],
+            "name": "Money Heist",
+            "popularity": 386.775,
+            "origin_country": [
+                "ES"
+            ],
+            "vote_count": 415,
+            "first_air_date": "2017-05-02",
+            "backdrop_path": "/piuRhGiQBYWgW668eSNJ2ug5uAO.jpg",
+            "original_language": "es",
+            "id": 71446,
+            "vote_average": 8.1,
+            "overview": "To carry out the biggest heist in history, a mysterious man called The Professor recruits a band of eight robbers who have a single characteristic: none of them has anything to lose. Five months of seclusion - memorizing every step, every detail, every probability - culminate in eleven days locked up in the National Coinage and Stamp Factory of Spain, surrounded by police forces and with dozens of hostages in their power, to find out whether their suicide wager will lead to everything or nothing.",
+            "poster_path": "/MoEKaPFHABtA1xKoOteirGaHl1.jpg"
+        },
+        {
+            "original_name": "ドラゴンボール",
+            "genre_ids": [
+                16,
+                35,
+                10759,
+                10765
+            ],
+            "name": "Dragon Ball",
+            "popularity": 291.912,
+            "origin_country": [
+                "JP"
+            ],
+            "vote_count": 330,
+            "first_air_date": "1986-02-26",
+            "backdrop_path": "/iflq7ZJfso6WC7gk9l1tD3unWK.jpg",
+            "original_language": "ja",
+            "id": 12609,
+            "vote_average": 7.1,
+            "overview": "Long ago in the mountains, a fighting master known as Gohan discovered a strange boy whom he named Goku. Gohan raised him and trained Goku in martial arts until he died. The young and very strong boy was on his own, but easily managed. Then one day, Goku met a teenage girl named Bulma, whose search for the dragon balls brought her to Goku's home. Together, they set off to find all seven dragon balls in an adventure.",
+            "poster_path": "/3wx3EAMtqnbSLhGG8NrqXriCUIQ.jpg"
+        },
+        {
+            "original_name": "The Flash",
+            "genre_ids": [
+                18,
+                10765
+            ],
+            "name": "The Flash",
+            "popularity": 255.217,
+            "origin_country": [
+                "US"
+            ],
+            "vote_count": 2747,
+            "first_air_date": "2014-10-07",
+            "backdrop_path": "/jC1KqsFx8ZyqJyQa2Ohi7xgL7XC.jpg",
+            "original_language": "en",
+            "id": 60735,
+            "vote_average": 6.7,
+            "overview": "After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed, granting him the ability to move through Central City like an unseen guardian angel. Though initially excited by his newfound powers, Barry is shocked to discover he is not the only \"meta-human\" who was created in the wake of the accelerator explosion -- and not everyone is using their new powers for good. Barry partners with S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends and associates know that Barry is literally the fastest man alive, but it won't be long before the world learns what Barry Allen has become...The Flash.",
+            "poster_path": "/fki3kBlwJzFp8QohL43g9ReV455.jpg"
+        },
+        {
+            "original_name": "Arrow",
+            "genre_ids": [
+                80,
+                18,
+                9648,
+                10759
+            ],
+            "name": "Arrow",
+            "popularity": 239.556,
+            "origin_country": [
+                "US"
+            ],
+            "vote_count": 2536,
+            "first_air_date": "2012-10-10",
+            "backdrop_path": "/dKxkwAJfGuznW8Hu0mhaDJtna0n.jpg",
+            "original_language": "en",
+            "id": 1412,
+            "vote_average": 5.8,
+            "overview": "Spoiled billionaire playboy Oliver Queen is missing and presumed dead when his yacht is lost at sea. He returns five years later a changed man, determined to clean up the city as a hooded vigilante armed with a bow.",
+            "poster_path": "/mo0FP1GxOFZT4UDde7RFDz5APXF.jpg"
+        },
+        {
+            "original_name": "Stranger Things",
+            "genre_ids": [
+                18,
+                9648,
+                10765
+            ],
+            "name": "Stranger Things",
+            "popularity": 231.085,
+            "origin_country": [
+                "US"
+            ],
+            "vote_count": 2432,
+            "first_air_date": "2016-07-15",
+            "backdrop_path": "/56v2KjBlU4XaOv9rVYEQypROD7P.jpg",
+            "original_language": "en",
+            "id": 66732,
+            "vote_average": 8.3,
+            "overview": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+            "poster_path": "/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg"
+        },
+        {
+            "original_name": "ありふれた職業で世界最強",
+            "genre_ids": [
+                16,
+                10759,
+                10765
+            ],
+            "name": "Arifureta: From Commonplace to World's Strongest",
+            "popularity": 219.071,
+            "origin_country": [
+                "JP"
+            ],
+            "vote_count": 5,
+            "first_air_date": "2019-07-08",
+            "backdrop_path": "/1lL1ts7dzTUp0eOTHvMqfw6zFJn.jpg",
+            "original_language": "ja",
+            "id": 86034,
+            "vote_average": 6,
+            "overview": "Seventeen-year-old Hajime Nagumo is your average, everyday otaku. However, his simple life of pulling all-nighters and sleeping in school is suddenly turned upside down when he, along with the rest of his class, is summoned to a fantasy world! They're treated like heroes and tasked with the duty of saving the human race from utter extinction. But what should have been any otaku's wet dream quickly turns into Hajime's nightmare. While the rest of his class are blessed with godlike powers, Hajime's job, Synergist, only has a single transmutation skill. Ridiculed and bullied by his classmates for being weak, he soon finds himself in despair. Will he be able to survive in this dangerous world of monsters and demons with only a glorified blacksmith's level of strength?",
+            "poster_path": "/5Z4799yZOHO6634NRekxo5aAeHK.jpg"
+        },
+        {
+            "original_name": "Crímenes que cambiaron la historia",
+            "genre_ids": [
+                99,
+                10767
+            ],
+            "name": "Crímenes que cambiaron la historia",
+            "popularity": 218.577,
+            "origin_country": [
+                "ES"
+            ],
+            "vote_count": 6,
+            "first_air_date": "2019-01-22",
+            "backdrop_path": "/fngq96eBFAlXuqUzzKuxCi0ytsB.jpg",
+            "original_language": "es",
+            "id": 86816,
+            "vote_average": 3.5,
+            "overview": "",
+            "poster_path": "/fMgPDXqSL4XILb0RKSXpDqc5tJ9.jpg"
+        },
+        {
+            "original_name": "ワンパンマン",
+            "genre_ids": [
+                16,
+                35,
+                10759
+            ],
+            "name": "One-Punch Man",
+            "popularity": 194.614,
+            "origin_country": [
+                "JP"
+            ],
+            "vote_count": 438,
+            "first_air_date": "2015-10-04",
+            "backdrop_path": "/s0w8JbuNNxL1YgaHeDWih12C3jG.jpg",
+            "original_language": "ja",
+            "id": 63926,
+            "vote_average": 8,
+            "overview": "Saitama is a hero who only became a hero for fun. After three years of “special” training, though, he’s become so strong that he’s practically invincible. In fact, he’s too strong—even his mightiest opponents are taken out with a single punch, and it turns out that being devastatingly powerful is actually kind of a bore. With his passion for being a hero lost along with his hair, yet still faced with new enemies every day, how much longer can he keep it going?",
+            "poster_path": "/iE3s0lG5QVdEHOEZnoAxjmMtvne.jpg"
+        },
+        {
+            "original_name": "Legion",
+            "genre_ids": [
+                10759,
+                10765
+            ],
+            "name": "Legion",
+            "popularity": 187.044,
+            "origin_country": [
+                "US"
+            ],
+            "vote_count": 580,
+            "first_air_date": "2017-02-08",
+            "backdrop_path": "/87eP7ITTrOWvkA4EqCuoRdyjzLy.jpg",
+            "original_language": "en",
+            "id": 67195,
+            "vote_average": 7.6,
+            "overview": "David Haller, AKA Legion, is a troubled young man who may be more than human. Diagnosed as schizophrenic, David has been in and out of psychiatric hospitals for years. But after a strange encounter with a fellow patient, he’s confronted with the possibility that the voices he hears and the visions he sees might be real.",
+            "poster_path": "/vT0Zsbm4GWd7llNjgWEtwY0CqOv.jpg"
+        },
+        {
+            "original_name": "Marvel's Agents of S.H.I.E.L.D.",
+            "genre_ids": [
+                18,
+                10759,
+                10765
+            ],
+            "name": "Marvel's Agents of S.H.I.E.L.D.",
+            "popularity": 148.913,
+            "origin_country": [
+                "US"
+            ],
+            "vote_count": 1324,
+            "first_air_date": "2013-09-24",
+            "backdrop_path": "/iWopHyAvuIDjGX10Yc3nn6UEebW.jpg",
+            "original_language": "en",
+            "id": 1403,
+            "vote_average": 6.8,
+            "overview": "Agent Phil Coulson of S.H.I.E.L.D. (Strategic Homeland Intervention, Enforcement and Logistics Division) puts together a team of agents to investigate the new, the strange and the unknown around the globe, protecting the ordinary from the extraordinary.",
+            "poster_path": "/cXiETfFK1BTLest5fhTLfDLRdL6.jpg"
+        },
+        {
+            "original_name": "The 100",
+            "genre_ids": [
+                18,
+                10765
+            ],
+            "name": "The 100",
+            "popularity": 123.802,
+            "origin_country": [
+                "US"
+            ],
+            "vote_count": 1595,
+            "first_air_date": "2014-03-19",
+            "backdrop_path": "/qYTIuJJ7fIehicAt3bl0vW70Sq6.jpg",
+            "original_language": "en",
+            "id": 48866,
+            "vote_average": 6.5,
+            "overview": "100 years in the future, when the Earth has been abandoned due to radioactivity, the last surviving humans live on an ark orbiting the planet — but the ark won't last forever. So the repressive regime picks 100 expendable juvenile delinquents to send down to Earth to see if the planet is still habitable.",
+            "poster_path": "/wBzNjurA8ijJPF21Ggs9nbviIzi.jpg"
+        },
+        {
+            "original_name": "異世界チート魔術師",
+            "genre_ids": [
+                16,
+                10759,
+                10765
+            ],
+            "name": "Isekai Cheat Magician",
+            "popularity": 169.839,
+            "origin_country": [
+                "JP"
+            ],
+            "vote_count": 4,
+            "first_air_date": "2019-07-10",
+            "backdrop_path": "/5Sr9nOKdh7g20qZPcwe9eS0WYR8.jpg",
+            "original_language": "ja",
+            "id": 90215,
+            "vote_average": 6.8,
+            "overview": "As regular high school students Taichi and Rin disappeared in a beam of light. When they came to, the two of them were already in a world of swords and magic. Finally getting away after experiencing an attack by monsters, following the suggestion of adventurers they headed on the path towards the guild. In the guild, the two of them found out that they possessed unbelievably powerful magic. Thus the regular high school students transformed into the strongest cheats...",
+            "poster_path": "/bda9my9vSL78zO40hcHLzb0Ae4t.jpg"
+        },
+        {
+            "original_name": "ワンピース",
+            "genre_ids": [
+                16,
+                35,
+                10759
+            ],
+            "name": "One Piece",
+            "popularity": 169.576,
+            "origin_country": [
+                "JP"
+            ],
+            "vote_count": 253,
+            "first_air_date": "1999-10-20",
+            "backdrop_path": "/xgs7zAF5VSGAK0QstH1Q0ivybXz.jpg",
+            "original_language": "ja",
+            "id": 37854,
+            "vote_average": 7.6,
+            "overview": "Years ago, the fearsome pirate king Gol D. Roger was executed, leaving a huge pile of treasure and the famous \"One Piece\" behind. Whoever claims the \"One Piece\" will be named the new pirate king. Monkey D. Luffy, a boy who consumed one of the \"Devil's Fruits\", has it in his head that he'll follow in the footsteps of his idol, the pirate Shanks, and find the One Piece. It helps, of course, that his body has the properties of rubber and he's surrounded by a bevy of skilled fighters and thieves to help him along the way. Monkey D. Luffy brings a bunch of his crew followed by, Roronoa Zoro, Nami, Usopp, Sanji, Tony-Tony Chopper, Nico Robin, Franky, and Brook. They will do anything to get the One Piece and become King of the Pirates!",
+            "poster_path": "/gJI77i79KnRuc9mGPKADPZWAE8O.jpg"
+        },
+        {
+            "original_name": "ダンジョンに出会いを求めるのは間違っているだろうか",
+            "genre_ids": [
+                16,
+                35,
+                10765
+            ],
+            "name": "Is It Wrong to Try to Pick Up Girls in a Dungeon?",
+            "popularity": 265.713,
+            "origin_country": [
+                "JP"
+            ],
+            "vote_count": 51,
+            "first_air_date": "2015-04-04",
+            "backdrop_path": "/xCmdeEvJNxptR30bEVXXWLrt4iI.jpg",
+            "original_language": "ja",
+            "id": 62745,
+            "vote_average": 7.1,
+            "overview": "Bell Cranell is a rookie adventurer and the sole member of his dirt-poor guild founded by the petite goddess Hestia. Adventurers come from far and wide looking to strike it big in the massive labyrinth known as Dungeon, located beneath the city of Orario. Bell is more interested in picking up girls than Dungeon-crawling, but his reality check comes sooner than expected. Saved from a brush with death by the beautiful, renowned adventurer Aiz Wallenstein, Bell falls head-over-heels and sets his sights on winning her heart, but she's not the only woman he's caught the attention of, for better of worse.",
+            "poster_path": "/1RCLDDLhIYbHDxOEHhoLs33W4to.jpg"
+        },
+        {
+            "original_name": "Family Guy",
+            "genre_ids": [
+                16,
+                35
+            ],
+            "name": "Family Guy",
+            "popularity": 162.417,
+            "origin_country": [
+                "US"
+            ],
+            "vote_count": 1567,
+            "first_air_date": "1999-01-31",
+            "backdrop_path": "/3OFrs1ets87VmRvG78Zg5eJTZeq.jpg",
+            "original_language": "en",
+            "id": 1434,
+            "vote_average": 6.5,
+            "overview": "Sick, twisted, politically incorrect and Freakin' Sweet animated series featuring the adventures of the dysfunctional Griffin family. Bumbling Peter and long-suffering Lois have three kids. Stewie (a brilliant but sadistic baby bent on killing his mother and taking over the world), Meg (the oldest, and is the most unpopular girl in town) and Chris (the middle kid, he's not very bright but has a passion for movies). The final member of the family is Brian - a talking dog and much more than a pet, he keeps Stewie in check whilst sipping Martinis and sorting through his own life issues.",
+            "poster_path": "/gBGUL1UTUNmdRQT8gA1LUV4yg39.jpg"
+        },
+        {
+            "original_name": "フェアリーテイル",
+            "genre_ids": [
+                16,
+                35,
+                10759,
+                10765
+            ],
+            "name": "Fairy Tail",
+            "popularity": 180.011,
+            "origin_country": [
+                "JP"
+            ],
+            "vote_count": 186,
+            "first_air_date": "2009-10-12",
+            "backdrop_path": "/m2lugAG39sO0yCcuxEAu4fY5u1o.jpg",
+            "original_language": "ja",
+            "id": 46261,
+            "vote_average": 6.4,
+            "overview": "Lucy is a 17-year-old girl, who wants to be a full-fledged mage. One day when visiting Harujion Town, she meets Natsu, a young man who gets sick easily by any type of transportation. But Natsu isn't just any ordinary kid, he's a member of one of the world's most infamous mage guilds: Fairy Tail.",
+            "poster_path": "/58GKcwFV3lpVOGzybeMrrNOjHpz.jpg"
+        },
+        {
+            "original_name": "Fear the Walking Dead",
+            "genre_ids": [
+                18,
+                27
+            ],
+            "name": "Fear the Walking Dead",
+            "popularity": 155.394,
+            "origin_country": [
+                "US"
+            ],
+            "vote_count": 965,
+            "first_air_date": "2015-08-23",
+            "backdrop_path": "/7r4FieFH6Eh6S55hi8c9LOiFENg.jpg",
+            "original_language": "en",
+            "id": 62286,
+            "vote_average": 6.3,
+            "overview": "What did the world look like as it was transforming into the horrifying apocalypse depicted in \"The Walking Dead\"? This spin-off set in Los Angeles, following new characters as they face the beginning of the end of the world, will answer that question.",
+            "poster_path": "/aOdTWn8dXlS0tA5xl0ZBr8Ws15R.jpg"
+        },
+        {
+            "original_name": "Murder, She Wrote",
+            "genre_ids": [
+                80,
+                18,
+                9648
+            ],
+            "name": "Murder, She Wrote",
+            "popularity": 153.22,
+            "origin_country": [
+                "US"
+            ],
+            "vote_count": 82,
+            "first_air_date": "1984-09-30",
+            "backdrop_path": "/5M8bF0BwBk6RtJVrvpS9zj2bcxM.jpg",
+            "original_language": "en",
+            "id": 484,
+            "vote_average": 7,
+            "overview": "An unassuming mystery writer turned sleuth uses her professional insight to help solve real-life homicide cases.",
+            "poster_path": "/j6DC2Xe0SZS6xKS2d6LWL1EGwzX.jpg"
+        },
+        {
+            "original_name": "ドクターストーン",
+            "genre_ids": [
+                16,
+                10759
+            ],
+            "name": "Dr. Stone",
+            "popularity": 251.381,
+            "origin_country": [
+                "JP"
+            ],
+            "vote_count": 11,
+            "first_air_date": "2019-07-05",
+            "backdrop_path": "/1Ep6YHL5QcrNC1JN6RYalWRPopi.jpg",
+            "original_language": "ja",
+            "id": 86031,
+            "vote_average": 7.1,
+            "overview": "The science-fiction adventure follows two boys struggle to revive humanity after a mysterious crisis has left everyone in the world turned to stone for several millennia.",
+            "poster_path": "/dLlnzbDCblBXcJqFLXyvN43NIwp.jpg"
+        }
+    ]
+});
+//   const baseurl = process.env.TVSHOWS,
+//   api = process.env.MOVIEDB_API_KEY,
+//   language = process.env.LANGUAGE_TV_SHOW
+
+//   fetch(`${baseurl}${api}${language}`)
+//   .then(response => {
+//     if(response.ok){
+//       return response.json()
+//     }
+//     throw new Error('Tv show request failed')
+//   }).then(jsonResponse => res.json(jsonResponse))
 }
