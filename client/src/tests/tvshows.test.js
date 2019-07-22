@@ -7,13 +7,15 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<TvShow />', ()=> {
   it('renders say hello', ()=>{
+    const mockedPromise = () => Promise.resolve({ data: [ 'LoveIsand', 'Power rangers'] })
 
-    let myMock = jest.fn(()=> Promise.resolve({ data: [ 'LoveIsand', 'Power rangers']}))
+    let myMock = jest.fn(()=> Promise.resolve({ json: ()=> mockedPromise }));
+
     jest.spyOn( global, 'fetch').mockImplementation(myMock)
 
     const wrapper = shallow(< TvShow />)
     expect(wrapper.text()).toEqual('Hllo')
-    expect(global.fetch).toHaveBeenNthCalledWith(1,'https://jsonplaceholder.typicode.com/todos/1')
+    expect(global.fetch).toHaveBeenNthCalledWith(1,'/api/movies/tvshows/movies')
 
   })
 })
