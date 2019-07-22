@@ -21,7 +21,6 @@ export class Discover extends React.Component{
 
   render(){
     const { discovermovie } = this.state
-    console.log(discovermovie)
     return(<div className='container'>
       {discovermovie.map(movies => {
         return(
