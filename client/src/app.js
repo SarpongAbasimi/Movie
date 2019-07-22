@@ -5,6 +5,7 @@ import { popularMoviesData } from '../src/components/apiCalls';
 import {  Movie } from '../src/components/movie';
 import { NoMatch } from '../src/components/nomatch';
 import { Discover } from '../src/components/discover';
+import { TvShow } from '../src/components/tvshows'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import './styles/app.css';
@@ -31,6 +32,7 @@ export class App extends React.Component{
         <Route exact path='/' render={()=> <Home movieListData={this.state.list} /> }/>
         <Route exact path='/movie/:id' component = { Movie }/>
         <Route path='/discover' component={ Discover }/>
+        <Route path='/tvshows' component={TvShow} />
         <Route component={ NoMatch }/>
       </Switch>
     </Router>
