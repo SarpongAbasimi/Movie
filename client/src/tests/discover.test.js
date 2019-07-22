@@ -8,7 +8,6 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('<Discover/>', ()=>{
   it('displays discover on the page', ()=>{
     const wrapper = shallow(<Discover/>)
-    console.log(wrapper.debug())
     expect(wrapper.find('.container')).toHaveLength(1)
   })
 });
