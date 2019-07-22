@@ -8,14 +8,14 @@ export class TvShow extends React.Component{
     }
   }
   getData(){
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
+    fetch('/api/movies/tvshows/movies')
     .then(response => {
       if(response.ok){
         return(response.json())
       }
       throw new Error('Promblem with getting tv shows')
-    }).then(jsonResponse => console.log(jsonResponse))
-    .catch(rejection => console.log(rejection))
+    }).then(jsonResponse => this.setState({tvShowData: jsonResponse}))
+    .catch(rejection => rejection )
   }
 
   componentDidMount(){
@@ -23,13 +23,7 @@ export class TvShow extends React.Component{
   }
 
   render(){
+    console.log(this.state.tvShowData)
     return <h1>Hllo</h1>
   }
 }
-
-export const video = {
-  play() {
-    return true;
-  },
-};
-
