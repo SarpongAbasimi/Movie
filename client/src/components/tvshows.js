@@ -14,7 +14,7 @@ export class TvShow extends React.Component{
         return(response.json())
       }
       throw new Error('Promblem with getting tv shows')
-    }).then(jsonResponse => this.setState({tvShowData: jsonResponse}))
+    }).then(jsonResponse => this.setState({tvShowData: jsonResponse.results }))
     .catch(rejection => rejection )
   }
 
@@ -23,7 +23,16 @@ export class TvShow extends React.Component{
   }
 
   render(){
-    console.log(this.state.tvShowData)
-    return <h1>Hllo</h1>
+    const { tvShowData } = this.state
+    return(<div className='container'>
+      { tvShowData.map(tvShows => {
+        return(
+          <div key={tvShows.id} className='main-container'>
+            { tvShows.poster_path && <img src={`https://image.tmdb.org/t/p/w500${tvShows.poster_path}`} alt=''/> }
+            <div id='title-holder'>{tvShows.name}</div>
+          </div>
+        );
+      })}
+    </div>)
   }
 }
