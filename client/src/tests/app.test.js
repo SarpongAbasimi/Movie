@@ -36,16 +36,8 @@ describe('<App/>', ()=> {
 
     expect(global.fetch).toHaveBeenCalledTimes(1);
     expect(global.fetch).toHaveBeenCalledWith('/api/movies/popular/movies');
+    expect(wrapper.find('Nav')).toBeTruthy();
 
-    process.nextTick(() => {
-      expect(wrapper.find('Nav')).toBeTruthy();
-      global.fetch.mockClear()
-      done();
-    });
     done();
-  });
-
-  xit('allows a user to access more information about a movie', ()=>{
-
   });
 });

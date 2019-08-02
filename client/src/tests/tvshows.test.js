@@ -14,7 +14,7 @@ describe('<TvShow />', ()=> {
     jest.spyOn( global, 'fetch').mockImplementation(myMock)
 
     const wrapper = shallow(< TvShow />)
-    expect(wrapper.text()).toEqual('Hllo')
+    expect(wrapper.text()).toEqual('')
     expect(global.fetch).toHaveBeenNthCalledWith(1,'/api/movies/tvshows/movies')
 
   })
